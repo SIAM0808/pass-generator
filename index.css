@@ -1,28 +1,56 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-
-body{
-    width: 100%;
-    background-color: rgb(60, 60, 88);
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    overflow: hidden;
+body {
     position: relative;
-    
+    height: 100%;
+    overflow: hidden;
+    background-color: #215836;
+    display: flex;
+    margin-left: -150px;
 }
 
+img {
+    position: relative;
+    overflow: hidden;
+    height: 225px;
+    width: 225px;
+   border-radius: 5px;
+    z-index: 2;
+   left: 45%;
+   top: 50px;
+}
 
-body span{
+body {  
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;   
+    z-index: 1; /* Ensure container is below body */
+
+}
+
+.div1 {
+    height: 100%;
+    width: 50px; /* Fixed width for each div */
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    /* margin-left: 5px; */
+}
+
+body span {
+    position: absolute;
+    bottom: 0; /* Start from the bottom */
+     /* Center horizontally */
+    /* transform: translateX(-50%); */
+    border-radius: 2px;
     height: 8px;
     width: 8px;
-    background-color: black;
+    background-color: rgb(25, 54, 27);
     animation: animate 10s ease-in-out infinite;
     animation-duration: calc(60s / var(--i));
-    position: relative;
 }
 
 @keyframes animate {
@@ -38,10 +66,4 @@ body span{
         background-color: rgba(36, 34, 34, 0.5);
         transform: translateY(-100vh); /* Move to the top */
     }
-}
-img{
-    height: 225px;
-    width: 225px;
-    position: relative;
-    top: 50px;
 }
