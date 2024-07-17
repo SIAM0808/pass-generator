@@ -105,8 +105,8 @@ img {
     border: none;
     margin-top: 5px;
 }
-.container button:hover{
-
+.container button:active{
+    font-size: 15px;
 }
 .container label{
     text-align: center;
