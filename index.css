@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(60, 60, 88);
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+
+body span{
+    height: 8px;
+    width: 8px;
+    background-color: black;
+    animation: animate 10s ease-in-out infinite;
+    animation-duration: calc(60s / var(--i));
+    position: relative;
+}
+
+@keyframes animate {
+    100% {
+        background-color: rgba(36, 34, 34, 0.5);
+        transform: translateY(0);
+    }
+    50% {
+        background-color: rgb(102, 102, 109);
+        transform: translateY(-50vh); /* Move to the middle */
+    }
+    0% {
+        background-color: rgba(36, 34, 34, 0.5);
+        transform: translateY(-100vh); /* Move to the top */
+    }
+}
+img{
+    height: 225px;
+    width: 225px;
+    position: relative;
+    top: 50px;
+}
